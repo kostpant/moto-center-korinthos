@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="el">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Επικοινωνία | MOTO CENTER - ΕΥΜΟΡΦΙΑΔΗΣ ΙΩΑΝΝΗΣ</title>
-  <meta name="description" content="Επικοινωνήστε με το MOTO CENTER στην Κόρινθο. Τηλέφωνο: 27410 83014, Email: motocent@otenet.gr, Διεύθυνση: Λεωφ. Ιωνίας & Μ. Μπότσαρη 26.">
-  
+  <meta name="description"
+    content="Επικοινωνήστε με το MOTO CENTER στην Κόρινθο. Τηλέφωνο: 27410 83014, Email: motocent@otenet.gr, Διεύθυνση: Λεωφ. Ιωνίας & Μ. Μπότσαρη 26.">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/layout.css">
@@ -19,10 +23,10 @@
   <link rel="stylesheet" href="styles/romans-components.css">
   <link rel="stylesheet" href="styles/romans-exact.css">
   <link rel="stylesheet" href="styles/hero-typography.css">
-  
+
   <style>
     /* Contact Page — Exact Romans Match */
-    
+
     /* Hero Banner */
     .contact-hero {
       position: relative;
@@ -34,20 +38,20 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     .contact-hero__overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.72);
+      background: rgba(0, 0, 0, 0.72);
     }
-    
+
     .contact-hero__content {
       position: relative;
       z-index: 2;
       text-align: center;
       padding-top: 88px;
     }
-    
+
     .contact-hero__title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -57,14 +61,14 @@
       color: #ffffff;
       margin: 0;
     }
-    
+
     .contact-hero__rule {
       width: 80px;
       height: 1px;
-      background: rgba(255,255,255,0.6);
+      background: rgba(255, 255, 255, 0.6);
       margin: 20px auto 0;
     }
-    
+
     /* Form Section */
     .contact-form-section {
       background: #ffffff;
@@ -73,20 +77,20 @@
       position: relative;
       z-index: 10;
     }
-    
+
     .contact-form-panel {
       max-width: 900px;
       margin: 0 auto;
       background: #ffffff;
       padding: 60px 80px 60px;
-      box-shadow: 0 2px 40px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 40px rgba(0, 0, 0, 0.08);
     }
-    
+
     .contact-form-heading {
       text-align: center;
       margin-bottom: 44px;
     }
-    
+
     .contact-form-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
@@ -96,36 +100,36 @@
       color: #111111;
       margin: 0;
     }
-    
+
     .contact-form-rule {
       width: 60px;
       height: 1px;
       background: #111111;
       margin: 14px auto 0;
     }
-    
+
     .contact-form {
       display: flex;
       flex-direction: column;
       gap: 24px;
     }
-    
+
     .contact-form__row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
-    
+
     .contact-form__group {
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-    
+
     .contact-form__group--full {
       grid-column: 1 / -1;
     }
-    
+
     .contact-form__label {
       font-family: 'Inter', sans-serif;
       font-size: 0.65rem;
@@ -134,12 +138,12 @@
       text-transform: uppercase;
       color: #111111;
     }
-    
+
     .required {
       color: #111111;
       font-weight: 400;
     }
-    
+
     .contact-form__input,
     .contact-form__textarea {
       font-family: 'Inter', sans-serif;
@@ -157,29 +161,29 @@
       appearance: none;
       -webkit-appearance: none;
     }
-    
+
     .contact-form__input:focus,
     .contact-form__textarea:focus {
       border-color: #111111;
     }
-    
+
     .contact-form__input::placeholder,
     .contact-form__textarea::placeholder {
       color: #aaaaaa;
       font-weight: 300;
     }
-    
+
     .contact-form__textarea {
       resize: vertical;
       min-height: 140px;
     }
-    
+
     .contact-form__submit-row {
       display: flex;
       justify-content: center;
       margin-top: 8px;
     }
-    
+
     .contact-form__submit {
       display: inline-flex;
       align-items: center;
@@ -198,11 +202,11 @@
       cursor: pointer;
       transition: background 0.25s ease;
     }
-    
+
     .contact-form__submit:hover {
       background: #333333;
     }
-    
+
     /* Info Strip */
     .contact-info {
       background: #ffffff;
@@ -210,7 +214,7 @@
       border-top: 1px solid #e5e5e5;
       border-bottom: 1px solid #e5e5e5;
     }
-    
+
     .contact-info__inner {
       max-width: 900px;
       margin: 0 auto;
@@ -219,20 +223,20 @@
       justify-content: center;
       gap: 0;
     }
-    
+
     .contact-info__item {
       flex: 1;
       text-align: center;
       padding: 0 40px;
     }
-    
+
     .contact-info__divider {
       width: 1px;
       background: #e5e5e5;
       align-self: stretch;
       flex-shrink: 0;
     }
-    
+
     .contact-info__heading {
       font-family: 'Inter', sans-serif;
       font-size: 0.62rem;
@@ -242,7 +246,7 @@
       color: #111111;
       margin: 0 0 16px 0;
     }
-    
+
     .contact-info__text {
       font-family: 'Inter', sans-serif;
       font-size: 0.8rem;
@@ -251,7 +255,7 @@
       line-height: 1.8;
       margin: 0 0 10px 0;
     }
-    
+
     .contact-info__phone {
       display: block;
       font-family: 'Cormorant Garamond', serif;
@@ -263,8 +267,11 @@
       margin-bottom: 8px;
       transition: opacity 0.2s;
     }
-    .contact-info__phone:hover { opacity: 0.7; }
-    
+
+    .contact-info__phone:hover {
+      opacity: 0.7;
+    }
+
     .contact-info__link {
       font-family: 'Inter', sans-serif;
       font-size: 0.62rem;
@@ -279,21 +286,24 @@
       display: inline-block;
       margin-top: 8px;
     }
-    .contact-info__link:hover { border-color: #111111; }
-    
+
+    .contact-info__link:hover {
+      border-color: #111111;
+    }
+
     /* Find Us Section */
     .find-us {
       background: #ffffff;
       padding-top: 80px;
       padding-bottom: 0;
     }
-    
+
     .find-us__heading {
       text-align: center;
       margin-bottom: 40px;
       padding: 0 40px;
     }
-    
+
     .find-us__title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.75rem;
@@ -304,77 +314,78 @@
       margin: 0;
       padding: 0;
     }
-    
+
     .find-us__rule {
       width: 60px;
       height: 1px;
       background: #111111;
       margin: 14px auto 0;
     }
-    
+
     .find-us__map {
       width: 100%;
       line-height: 0;
       overflow: hidden;
     }
-    
+
     .find-us__map iframe {
       width: 100%;
       height: 480px;
       border: 0;
       display: block;
     }
-    
+
     /* Responsive */
     @media (max-width: 768px) {
       .contact-hero__title {
         font-size: 2rem;
         letter-spacing: 0.2em;
       }
-      
+
       .contact-form-panel {
         padding: 40px 24px;
         margin: 0 16px;
       }
-      
+
       .contact-form__row {
         grid-template-columns: 1fr;
       }
-      
+
       .contact-info__inner {
         flex-direction: column;
         gap: 36px;
       }
-      
+
       .contact-info__divider {
         display: none;
       }
-      
+
       .find-us {
         padding-top: 60px;
       }
-      
+
       .find-us__heading {
         padding: 0 24px;
         margin-bottom: 32px;
       }
-      
+
       .find-us__title {
         font-size: 1.4rem;
         letter-spacing: 0.3em;
       }
-      
+
       .find-us__map iframe {
         height: 320px;
       }
     }
   </style>
 </head>
+
 <body>
   <!-- Navigation — Romans-style centered logo layout -->
   <header class="navbar" id="navbar">
     <div class="navbar__inner">
-      
+
       <!-- Left links -->
       <nav class="navbar__left">
         <a href="index.html" class="navbar__link">HOME</a>
@@ -397,11 +408,11 @@
             c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20
             c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5
             c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 
-            10.8z"/>
+            10.8z" />
           </svg>
         </a>
       </nav>
-      
+
       <!-- Mobile hamburger -->
       <button class="navbar__hamburger" id="navbarToggle" aria-label="Toggle menu">
         <span></span>
@@ -410,7 +421,7 @@
       </button>
 
     </div>
-    
+
     <!-- Mobile menu overlay -->
     <div class="navbar__mobile" id="navbarMobile">
       <a href="index.html" class="navbar__link">HOME</a>
@@ -423,7 +434,7 @@
           c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20
           c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5
           c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 
-          10.8z"/>
+          10.8z" />
         </svg>
       </a>
     </div>
@@ -441,16 +452,13 @@
   <!-- Form Section -->
   <section class="contact-form-section">
     <div class="contact-form-panel">
-      
+
       <div class="contact-form-heading">
         <h2 class="contact-form-title">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ</h2>
         <div class="contact-form-rule"></div>
       </div>
 
-      <form class="contact-form" 
-            action="mailto:motocent@otenet.gr"
-            method="POST"
-            enctype="text/plain">
+      <form class="contact-form" action="mailto:motocent@otenet.gr" method="POST" enctype="text/plain">
 
         <!-- Row 1: First name + Last name -->
         <div class="contact-form__row">
@@ -458,19 +466,13 @@
             <label class="contact-form__label">
               Όνομα <span class="required">*</span>
             </label>
-            <input type="text" 
-                   name="first_name"
-                   class="contact-form__input" 
-                   required />
+            <input type="text" name="first_name" class="contact-form__input" required />
           </div>
           <div class="contact-form__group">
             <label class="contact-form__label">
               Επώνυμο <span class="required">*</span>
             </label>
-            <input type="text" 
-                   name="last_name"
-                   class="contact-form__input" 
-                   required />
+            <input type="text" name="last_name" class="contact-form__input" required />
           </div>
         </div>
 
@@ -480,28 +482,20 @@
             <label class="contact-form__label">
               Email <span class="required">*</span>
             </label>
-            <input type="email" 
-                   name="email"
-                   class="contact-form__input" 
-                   required />
+            <input type="email" name="email" class="contact-form__input" required />
           </div>
           <div class="contact-form__group">
             <label class="contact-form__label">
               Τηλέφωνο <span class="required">*</span>
             </label>
-            <input type="tel" 
-                   name="phone"
-                   class="contact-form__input" 
-                   required />
+            <input type="tel" name="phone" class="contact-form__input" required />
           </div>
         </div>
 
         <!-- Row 3: Message full width -->
         <div class="contact-form__group contact-form__group--full">
           <label class="contact-form__label">Μήνυμα</label>
-          <textarea name="message"
-                    class="contact-form__textarea" 
-                    rows="6"></textarea>
+          <textarea name="message" class="contact-form__textarea" rows="6"></textarea>
         </div>
 
         <!-- Row 4: Vehicle interest full width -->
@@ -509,10 +503,8 @@
           <label class="contact-form__label">
             Ενδιαφέρον για όχημα (προαιρετικό)
           </label>
-          <input type="text" 
-                 name="vehicle_interest"
-                 class="contact-form__input"
-                 placeholder="π.χ. SYM Symphony ST 200" />
+          <input type="text" name="vehicle_interest" class="contact-form__input"
+            placeholder="π.χ. SYM Symphony ST 200" />
         </div>
 
         <!-- Submit -->
@@ -536,9 +528,7 @@
           Λεωφ. Ιωνίας & Μ. Μπότσαρη 26<br>
           Κόρινθος 20100
         </p>
-        <a href="https://maps.google.com/?q=Λεωφ.+Ιωνίας+26+Κόρινθος"
-           class="contact-info__link"
-           target="_blank">
+        <a href="https://maps.google.com/?q=Λεωφ.+Ιωνίας+26+Κόρινθος" class="contact-info__link" target="_blank">
           ΟΔΗΓΙΕΣ →
         </a>
       </div>
@@ -550,8 +540,7 @@
         <a href="tel:2741083014" class="contact-info__phone">
           27410 83014
         </a>
-        <a href="mailto:motocent@otenet.gr" 
-           class="contact-info__link">
+        <a href="mailto:motocent@otenet.gr" class="contact-info__link">
           motocent@otenet.gr
         </a>
       </div>
@@ -584,13 +573,8 @@
     <div class="find-us__map">
       <iframe
         src="https://maps.google.com/maps?q=Λεωφ.+Ιωνίας+%26+Μ.+Μπότσαρη+26,+Κόρινθος+20100,+Greece&output=embed&hl=el&z=16"
-        width="100%"
-        height="480"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="MOTO CENTER - Λεωφ. Ιωνίας & Μ. Μπότσαρη 26, Κόρινθος">
+        width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="MOTO CENTER - Λεωφ. Ιωνίας & Μ. Μπότσαρη 26, Κόρινθος">
       </iframe>
     </div>
 
@@ -617,36 +601,39 @@
         <span class="romans-footer__logo-main">MOTO CENTER</span>
         <span class="romans-footer__logo-sub">ΕΥΜΟΡΦΙΑΔΗΣ</span>
       </div>
-      
+
       <p class="romans-footer__address">
         ΛΕΩΦ. ΙΩΝΙΑΣ & Μ. ΜΠΟΤΣΑΡΗ 26, ΚΟΡΙΝΘΟΣ 20100
       </p>
-      
+
       <div class="romans-footer__social">
         <a href="#" class="romans-footer__social-link" aria-label="Facebook">
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
           </svg>
         </a>
         <a href="#" class="romans-footer__social-link" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
           </svg>
         </a>
         <a href="tel:2741083014" class="romans-footer__social-link" aria-label="Phone">
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
           </svg>
         </a>
       </div>
-      
+
       <a href="tel:2741083014" class="romans-footer__phone">27410 83014</a>
-      
+
       <p class="romans-footer__legal">
         Εξουσιοδοτημένος αντιπρόσωπος SYM · DAYTONA · KAWASAKI · MODENAS · QUADRO στην Κορινθία.
       </p>
     </div>
-    
+
     <div class="romans-footer__bottom">
       <span class="romans-footer__copyright">© 2025 MOTO CENTER ΕΥΜΟΡΦΙΑΔΗΣ — ΚΟΡΙΝΘΟΣ</span>
       <div class="romans-footer__links">
@@ -660,23 +647,8 @@
   <!-- Scripts -->
   <script src="js/main.js"></script>
   <script>
-    // Contact page navbar — starts transparent over dark hero, switches to light after hero
-    document.addEventListener('DOMContentLoaded', () => {
-      const navbar = document.getElementById('navbar');
-      const hero = document.querySelector('.contact-hero');
-      if (!navbar) return;
-
-      window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 60);
-        if (hero) {
-          const heroBottom = hero.offsetHeight;
-          navbar.classList.toggle(
-            'navbar--light', 
-            window.scrollY > heroBottom - 100
-          );
-        }
-      }, { passive: true });
-    });
+    // Other page logic here
   </script>
 </body>
+
 </html>

@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="el">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Υπηρεσίες | MOTO CENTER - Service & Ανταλλακτικά</title>
-  <meta name="description" content="Εξειδικευμένο συνεργείο μοτοσυκλετών, ανταλλακτικά και αξεσουάρ. Εμπιστευτείτε τους ειδικούς για το service της μοτοσυκλέτας σας.">
-  
+  <meta name="description"
+    content="Εξειδικευμένο συνεργείο μοτοσυκλετών, ανταλλακτικά και αξεσουάρ. Εμπιστευτείτε τους ειδικούς για το service της μοτοσυκλέτας σας.">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/layout.css">
@@ -19,26 +23,26 @@
   <link rel="stylesheet" href="styles/romans-components.css">
   <link rel="stylesheet" href="styles/romans-exact.css">
   <link rel="stylesheet" href="styles/hero-typography.css">
-  
+
   <style>
     /* Services Page — Romans Insights Style */
     .services-page {
       background: #ffffff;
     }
-    
+
     /* Hero Photo Section */
     .services-hero {
       width: 100%;
       padding-top: 88px;
       line-height: 0;
     }
-    
+
     .services-hero__img-wrap {
       width: 100%;
       height: 480px;
       overflow: hidden;
     }
-    
+
     .services-hero__img {
       width: 100%;
       height: 100%;
@@ -46,19 +50,19 @@
       object-position: center;
       display: block;
     }
-    
+
     /* Intro Section */
     .services-intro {
       background: #ffffff;
       padding: 72px 40px 60px;
     }
-    
+
     .services-intro__inner {
       max-width: 760px;
       margin: 0 auto;
       text-align: center;
     }
-    
+
     .services-intro__title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.2rem;
@@ -68,14 +72,14 @@
       color: #111111;
       margin: 0;
     }
-    
+
     .services-intro__rule {
       width: 60px;
       height: 1px;
       background: #111111;
       margin: 16px auto 36px;
     }
-    
+
     .services-intro__text {
       font-family: 'Inter', sans-serif;
       font-size: 0.85rem;
@@ -88,13 +92,13 @@
       margin-left: auto;
       margin-right: auto;
     }
-    
+
     /* Services Grid Section */
     .services-grid-section {
       background: #ffffff;
       padding: 0 40px 80px;
     }
-    
+
     .services-grid {
       max-width: 1200px;
       margin: 0 auto;
@@ -102,7 +106,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-    
+
     /* Service Cards */
     .service-card {
       background: #ffffff;
@@ -113,12 +117,12 @@
       text-align: center;
       transition: border-color 0.25s ease;
     }
-    
+
     .service-card:hover {
       border-color: #111111;
       box-shadow: none;
     }
-    
+
     .service-card__icon {
       width: 80px;
       height: 80px;
@@ -129,7 +133,7 @@
       justify-content: center;
       margin: 0 auto 20px;
     }
-    
+
     .service-card__icon svg {
       width: 32px;
       height: 32px;
@@ -137,7 +141,7 @@
       stroke: #444444;
       fill: none;
     }
-    
+
     .service-card__title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.1rem;
@@ -147,7 +151,7 @@
       margin: 0 0 12px 0;
       text-transform: uppercase;
     }
-    
+
     .service-card__description {
       font-family: 'Inter', sans-serif;
       font-size: 0.78rem;
@@ -156,18 +160,18 @@
       line-height: 1.8;
       margin: 0;
     }
-    
+
     /* Process Section */
     .process-section {
       background: #f8f8f8;
       padding: 80px 40px;
     }
-    
+
     .process-section__header {
       text-align: center;
       margin-bottom: 60px;
     }
-    
+
     .process-section__title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
@@ -177,7 +181,7 @@
       color: #111111;
       margin: 0 0 12px 0;
     }
-    
+
     .process-section__subtitle {
       font-family: 'Inter', sans-serif;
       font-size: 0.72rem;
@@ -186,7 +190,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
-    
+
     .process-grid {
       max-width: 1000px;
       margin: 0 auto;
@@ -194,11 +198,11 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 40px;
     }
-    
+
     .process-step {
       text-align: center;
     }
-    
+
     .process-step__number {
       width: 64px;
       height: 64px;
@@ -213,7 +217,7 @@
       font-weight: 300;
       color: #ffffff;
     }
-    
+
     .process-step__title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1rem;
@@ -223,7 +227,7 @@
       margin: 0 0 10px 0;
       text-transform: uppercase;
     }
-    
+
     .process-step__desc {
       font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
@@ -232,14 +236,14 @@
       line-height: 1.7;
       margin: 0;
     }
-    
+
     /* CTA Section */
     .services-cta {
       background: #111111;
       padding: 100px 40px;
       color: #ffffff;
     }
-    
+
     .services-cta__inner {
       max-width: 1000px;
       margin: 0 auto;
@@ -248,7 +252,7 @@
       gap: 60px;
       align-items: center;
     }
-    
+
     .services-cta__title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5rem;
@@ -257,22 +261,22 @@
       color: #ffffff;
       margin: 0 0 20px 0;
     }
-    
+
     .services-cta__text {
       font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
       font-weight: 300;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       line-height: 1.8;
       margin: 0 0 32px 0;
     }
-    
+
     .services-cta__buttons {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
     }
-    
+
     .services-cta__btn {
       display: inline-flex;
       align-items: center;
@@ -291,87 +295,90 @@
       cursor: pointer;
       transition: background 0.25s ease;
     }
-    
+
     .services-cta__btn:hover {
       background: #e5e5e5;
     }
-    
+
     .services-cta__btn--outline {
       background: transparent;
       color: #ffffff;
-      border: 1px solid rgba(255,255,255,0.4);
+      border: 1px solid rgba(255, 255, 255, 0.4);
     }
-    
+
     .services-cta__btn--outline:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.7);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.7);
     }
-    
+
     .services-cta__image {
       width: 100%;
       aspect-ratio: 3/2;
       object-fit: cover;
       border-radius: 0;
     }
-    
+
     /* Responsive */
     @media (max-width: 1024px) {
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .process-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .services-cta__inner {
         grid-template-columns: 1fr;
         gap: 40px;
       }
     }
-    
+
     @media (max-width: 768px) {
       .services-hero__img-wrap {
         height: 360px;
       }
-      
+
       .services-intro {
         padding: 48px 24px 40px;
       }
-      
+
       .services-intro__title {
         font-size: 1.8rem;
         letter-spacing: 0.25em;
       }
-      
+
       .services-grid {
         grid-template-columns: 1fr;
         gap: 16px;
       }
-      
+
       .services-grid-section {
         padding: 0 24px 60px;
       }
-      
+
       .process-grid {
         grid-template-columns: 1fr;
         gap: 32px;
       }
-      
+
       .services-cta {
         padding: 60px 24px;
       }
-      
+
       .services-cta__title {
         font-size: 1.8rem;
       }
     }
   </style>
 </head>
+
 <body class="services-page">
 
   <!-- Navigation — Romans-style centered logo layout -->
   <header class="navbar" id="navbar">
     <div class="navbar__inner">
-      
+
       <!-- Left links -->
       <nav class="navbar__left">
         <a href="index.html" class="navbar__link">HOME</a>
@@ -394,11 +401,11 @@
             c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20
             c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5
             c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 
-            10.8z"/>
+            10.8z" />
           </svg>
         </a>
       </nav>
-      
+
       <!-- Mobile hamburger -->
       <button class="navbar__hamburger" id="navbarToggle" aria-label="Toggle menu">
         <span></span>
@@ -407,7 +414,7 @@
       </button>
 
     </div>
-    
+
     <!-- Mobile menu overlay -->
     <div class="navbar__mobile" id="navbarMobile">
       <a href="index.html" class="navbar__link">HOME</a>
@@ -420,7 +427,7 @@
           c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20
           c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5
           c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 
-          10.8z"/>
+          10.8z" />
         </svg>
       </a>
     </div>
@@ -429,12 +436,9 @@
   <!-- Hero Photo Section -->
   <section class="services-hero">
     <div class="services-hero__img-wrap">
-      <img 
-        src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1920&h=600&fit=crop"
-        alt="MOTO CENTER Service"
-        class="services-hero__img"
-        onerror="this.style.background='#1a1a1a'; this.style.display='block';"
-      />
+      <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1920&h=600&fit=crop"
+        alt="MOTO CENTER Service" class="services-hero__img"
+        onerror="this.style.background='#1a1a1a'; this.style.display='block';" />
     </div>
   </section>
 
@@ -446,13 +450,13 @@
       <div class="services-intro__rule"></div>
 
       <p class="services-intro__text">
-        Πλήρες φάσμα υπηρεσιών για τη μοτοσυκλέτα σας. 
-        Εξουσιοδοτημένο συνεργείο για SYM, DAYTONA, 
+        Πλήρες φάσμα υπηρεσιών για τη μοτοσυκλέτα σας.
+        Εξουσιοδοτημένο συνεργείο για SYM, DAYTONA,
         KAWASAKI, MODENAS και QUADRO.
       </p>
 
       <p class="services-intro__text">
-        Από το routine service μέχρι πολύπλοκες επισκευές — 
+        Από το routine service μέχρι πολύπλοκες επισκευές —
         η ομάδα μας είναι εδώ για κάθε ανάγκη της μηχανής σας.
       </p>
 
@@ -462,68 +466,81 @@
   <!-- Services Grid Section -->
   <section class="services-grid-section">
     <div class="services-grid">
-      
+
       <div class="service-card reveal">
         <div class="service-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
         </div>
         <h3 class="service-card__title">Service</h3>
-        <p class="service-card__description">Περιοδικό service, αλλαγή λαδιών, φίλτρων, μπουζί. Εξουσιοδοτημένο για SYM, DAYTONA, KAWASAKI και όλες τις μάρκες.</p>
+        <p class="service-card__description">Περιοδικό service, αλλαγή λαδιών, φίλτρων, μπουζί. Εξουσιοδοτημένο για SYM,
+          DAYTONA, KAWASAKI και όλες τις μάρκες.</p>
       </div>
-      
+
       <div class="service-card reveal">
         <div class="service-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
           </svg>
         </div>
         <h3 class="service-card__title">Ανταλλακτικά</h3>
-        <p class="service-card__description">Γνήσια ανταλλακτικά για SYM, DAYTONA, KAWASAKI, MODENAS, QUADRO. Μεγάλη διαθεσιμότητα και άμεση παράδοση.</p>
+        <p class="service-card__description">Γνήσια ανταλλακτικά για SYM, DAYTONA, KAWASAKI, MODENAS, QUADRO. Μεγάλη
+          διαθεσιμότητα και άμεση παράδοση.</p>
       </div>
-      
+
       <div class="service-card reveal">
         <div class="service-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
         <h3 class="service-card__title">Έλεγχος ΚΤΕΟ</h3>
-        <p class="service-card__description">Προετοιμασία και έλεγχος πριν το ΚΤΕΟ. Διάγνωση και επισκευή προβλημάτων για επιτυχή έκβαση.</p>
+        <p class="service-card__description">Προετοιμασία και έλεγχος πριν το ΚΤΕΟ. Διάγνωση και επισκευή προβλημάτων
+          για επιτυχή έκβαση.</p>
       </div>
-      
+
       <div class="service-card reveal">
         <div class="service-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
           </svg>
         </div>
         <h3 class="service-card__title">Προσαρμογές</h3>
-        <p class="service-card__description">Τοποθέτηση αξεσουάρ, εξατμίσεων, φιλτρακίων, παρμπρίζ. Προσαρμογές στις ανάγκες σας.</p>
+        <p class="service-card__description">Τοποθέτηση αξεσουάρ, εξατμίσεων, φιλτρακίων, παρμπρίζ. Προσαρμογές στις
+          ανάγκες σας.</p>
       </div>
-      
+
       <div class="service-card reveal">
         <div class="service-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
         </div>
         <h3 class="service-card__title">Ασφάλειες</h3>
-        <p class="service-card__description">Συνεργασία με τις μεγαλύτερες ασφαλιστικές εταιρείες. Άμεση έκδοση συμβολαίων στις καλύτερες τιμές.</p>
+        <p class="service-card__description">Συνεργασία με τις μεγαλύτερες ασφαλιστικές εταιρείες. Άμεση έκδοση
+          συμβολαίων στις καλύτερες τιμές.</p>
       </div>
-      
+
       <div class="service-card reveal">
         <div class="service-card__icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
         </div>
         <h3 class="service-card__title">Χρηματοδότηση</h3>
-        <p class="service-card__description">Χρηματοδοτικά προγράμματα για αγορά μοτοσυκλέτας. Ευέλικτες δόσεις και ανταγωνιστικά επιτόκια.</p>
+        <p class="service-card__description">Χρηματοδοτικά προγράμματα για αγορά μοτοσυκλέτας. Ευέλικτες δόσεις και
+          ανταγωνιστικά επιτόκια.</p>
       </div>
-      
+
     </div>
   </section>
 
@@ -533,33 +550,36 @@
       <h2 class="process-section__title">Η Διαδικασία Service</h2>
       <p class="process-section__subtitle">Πως Δουλεύουμε</p>
     </div>
-    
+
     <div class="process-grid">
-      
+
       <div class="process-step reveal">
         <div class="process-step__number">1</div>
         <h3 class="process-step__title">Κλείστε Ραντεβού</h3>
-        <p class="process-step__desc">Καλέστε μας ή επισκεφθείτε μας για να κλείσετε ραντεβού στο χρόνο που σας εξυπηρετεί.</p>
+        <p class="process-step__desc">Καλέστε μας ή επισκεφθείτε μας για να κλείσετε ραντεβού στο χρόνο που σας
+          εξυπηρετεί.</p>
       </div>
-      
+
       <div class="process-step reveal">
         <div class="process-step__number">2</div>
         <h3 class="process-step__title">Διάγνωση</h3>
-        <p class="process-step__desc">Κάνουμε πλήρη έλεγχο της μοτοσυκλέτας και σας ενημερώνουμε για τις εργασίες που απαιτούνται.</p>
+        <p class="process-step__desc">Κάνουμε πλήρη έλεγχο της μοτοσυκλέτας και σας ενημερώνουμε για τις εργασίες που
+          απαιτούνται.</p>
       </div>
-      
+
       <div class="process-step reveal">
         <div class="process-step__number">3</div>
         <h3 class="process-step__title">Επισκευή</h3>
-        <p class="process-step__desc">Εκτελούμε το service με γνήσια ανταλλακτικά και σύγχρονο εξοπλισμό από εξειδικευμένους τεχνικούς.</p>
+        <p class="process-step__desc">Εκτελούμε το service με γνήσια ανταλλακτικά και σύγχρονο εξοπλισμό από
+          εξειδικευμένους τεχνικούς.</p>
       </div>
-      
+
       <div class="process-step reveal">
         <div class="process-step__number">4</div>
         <h3 class="process-step__title">Παράδοση</h3>
         <p class="process-step__desc">Παραλαμβάνετε τη μοτοσυκλέτα σας σε άριστη κατάσταση με εγγύηση εργασιών.</p>
       </div>
-      
+
     </div>
   </section>
 
@@ -568,11 +588,14 @@
     <div class="services-cta__inner">
       <div class="reveal-left">
         <h2 class="services-cta__title">Χρειάζεστε Service;</h2>
-        <p class="services-cta__text">Μην αφήνετε τη συντήρηση της μοτοσυκλέτας σας για αύριο. Κλείστε ραντεβού σήμερα και εξασφαλίστε την ασφαλή λειτουργία της.</p>
+        <p class="services-cta__text">Μην αφήνετε τη συντήρηση της μοτοσυκλέτας σας για αύριο. Κλείστε ραντεβού σήμερα
+          και εξασφαλίστε την ασφαλή λειτουργία της.</p>
         <div class="services-cta__buttons">
           <a href="tel:2741083014" class="services-cta__btn">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 18px; height: 18px;">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              style="width: 18px; height: 18px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
             Κλείστε Ραντεβού
           </a>
@@ -582,12 +605,8 @@
         </div>
       </div>
       <div class="reveal-right">
-        <img 
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop" 
-          alt="Motorcycle Service" 
-          class="services-cta__image"
-          loading="lazy"
-        />
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop"
+          alt="Motorcycle Service" class="services-cta__image" loading="lazy" />
       </div>
     </div>
   </section>
@@ -613,36 +632,39 @@
         <span class="romans-footer__logo-main">MOTO CENTER</span>
         <span class="romans-footer__logo-sub">ΕΥΜΟΡΦΙΑΔΗΣ</span>
       </div>
-      
+
       <p class="romans-footer__address">
         ΛΕΩΦ. ΙΩΝΙΑΣ & Μ. ΜΠΟΤΣΑΡΗ 26, ΚΟΡΙΝΘΟΣ 20100
       </p>
-      
+
       <div class="romans-footer__social">
         <a href="#" class="romans-footer__social-link" aria-label="Facebook">
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
           </svg>
         </a>
         <a href="#" class="romans-footer__social-link" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
           </svg>
         </a>
         <a href="tel:2741083014" class="romans-footer__social-link" aria-label="Phone">
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
           </svg>
         </a>
       </div>
-      
+
       <a href="tel:2741083014" class="romans-footer__phone">27410 83014</a>
-      
+
       <p class="romans-footer__legal">
         Εξουσιοδοτημένος αντιπρόσωπος SYM · DAYTONA · KAWASAKI · MODENAS · QUADRO στην Κορινθία.
       </p>
     </div>
-    
+
     <div class="romans-footer__bottom">
       <span class="romans-footer__copyright">© 2025 MOTO CENTER ΕΥΜΟΡΦΙΑΔΗΣ — ΚΟΡΙΝΘΟΣ</span>
       <div class="romans-footer__links">
@@ -656,18 +678,8 @@
   <!-- Scripts -->
   <script src="js/main.js"></script>
   <script>
-    // services.html — navbar starts in light mode immediately (no dark hero)
-    document.addEventListener('DOMContentLoaded', () => {
-      const navbar = document.getElementById('navbar');
-      if (navbar) {
-        navbar.classList.add('navbar--light');
-      }
-      
-      // Add scrolled class on scroll
-      window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 80);
-      }, { passive: true });
-    });
+    // Navigation and animations are handled in js/main.js
   </script>
 </body>
+
 </html>

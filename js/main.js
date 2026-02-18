@@ -16,34 +16,25 @@ function initNavigation() {
   const navbarMobile = document.getElementById('navbarMobile');
 
   // FIX 2 — NAVBAR MUST FLOAT OVER THE HERO
-  // Toggle scrolled class on scroll (passive for performance)
-  window.addEventListener('scroll', () => {
-    const navbarEl = document.querySelector('.navbar');
-    if (navbarEl) {
-      navbarEl.classList.toggle('scrolled', window.scrollY > 80);
+  // Consolidated Scroll Handler
+  const handleScroll = () => {
+    if (!navbar) return;
+
+    // Toggle scrolled state
+    const isScrolled = window.scrollY > 50;
+    navbar.classList.toggle('scrolled', isScrolled);
+
+    // Handle light mode on subpages (unless it's the index with a dark hero)
+    const isSubpage = !window.location.pathname.endsWith('index.html') &&
+      window.location.pathname !== '/';
+
+    if (isSubpage) {
+      navbar.classList.add('navbar--light');
     }
-  }, { passive: true });
+  };
 
-  // Legacy: Also toggle navbar--scrolled for backwards compatibility
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    // Add scrolled class when scrolling down
-    if (currentScroll > 100) {
-      navbar.classList.add('navbar--scrolled');
-    } else {
-      // Only remove if we're on the homepage
-      if (!window.location.pathname.includes('bikes') &&
-        !window.location.pathname.includes('services') &&
-        !window.location.pathname.includes('contact') &&
-        !window.location.pathname.includes('detail')) {
-        navbar.classList.remove('navbar--scrolled');
-      }
-    }
-
-    lastScroll = currentScroll;
-  });
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll(); // Initial check
 
   // Mobile menu toggle
   if (navbarToggle && navbarMobile) {

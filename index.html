@@ -420,6 +420,7 @@
   <script src="js/main.js"></script>
   <!-- Hero animation script — plays frames on scroll -->
   <script src="js/hero.js"></script>
+  <script src="js/main.js"></script>
   <script>
     // Unified navbar scroll handler — works for ALL pages
     (function () {
@@ -433,75 +434,54 @@
       // White pages: start in light mode immediately
       if (!hasDarkHero) {
         navbar.classList.add('navbar--light');
-      }
+        // Navigation logic is now handled in js/main.js
 
-      window.addEventListener('scroll', function () {
-        const scrolled = window.scrollY > 80;
-
-        // Always toggle scrolled class
-        navbar.classList.toggle('scrolled', scrolled);
-
-        // On pages with hero: switch to light when hero has scrolled out of view
-        if (hasDarkHero) {
-          const heroHeight = hasDarkHero.offsetHeight || window.innerHeight;
-          if (window.scrollY > heroHeight * 0.7) {
-            navbar.classList.add('navbar--light');
-          } else {
-            navbar.classList.remove('navbar--light');
-          }
-        }
-      }, { passive: true });
-
-      // Run once on load
-      window.dispatchEvent(new Event('scroll'));
-    })();
-
-    // Load latest arrivals on homepage — Exact Romans Style
-    document.addEventListener('DOMContentLoaded', async () => {
-      // Fix: Explicitly select the container
-      const latestContainer = document.getElementById('latestArrivals');
-      if (!latestContainer) {
-        console.error('latestArrivals container not found');
-        return;
-      }
-
-      try {
-        // Use centralized data service
-        const latestBikes = await window.fetchFeaturedBikes();
-
-        latestContainer.innerHTML = latestBikes.map(bike => {
-          // Flattened format from data-service
-          const b = bike.fields || bike;
-          const title = b.Title || b.title || 'Μοτοσυκλέτα';
-          const year = b.Year || b.year;
-          const price = (b.Price || b.price)
-            ? Number(b.Price || b.price).toLocaleString('el-GR') + ' €'
-            : 'Κατόπιν επικοινωνίας';
-
-          let imageUrl = 'https://via.placeholder.com/600x400';
-          const imgs = b.Images || b.images;
-          if (imgs && imgs.length > 0) {
-            if (typeof imgs[0] === 'string') imageUrl = imgs[0];
-            else if (imgs[0].url) imageUrl = imgs[0].url;
+        // Load latest arrivals on homepage — Exact Romans Style
+        document.addEventListener('DOMContentLoaded', async () => {
+          // Fix: Explicitly select the container
+          const latestContainer = document.getElementById('latestArrivals');
+          if (!latestContainer) {
+            console.error('latestArrivals container not found');
+            return;
           }
 
-          const mileage = (b.Mileage || b.mileage)
-            ? Number(b.Mileage || b.mileage).toLocaleString('el-GR') + ' km'
-            : '0 km';
+          try {
+            // Use centralized data service
+            const latestBikes = await window.fetchFeaturedBikes();
 
-          const bikeId = bike.id || b.id;
+            latestContainer.innerHTML = latestBikes.map(bike => {
+              // Flattened format from data-service
+              const b = bike.fields || bike;
+              const title = b.Title || b.title || 'Μοτοσυκλέτα';
+              const year = b.Year || b.year;
+              const price = (b.Price || b.price)
+                ? Number(b.Price || b.price).toLocaleString('el-GR') + ' €'
+                : 'Κατόπιν επικοινωνίας';
 
-          // Generated Link
-          const explicitLink = `bike-detail.html?id=${bikeId}`;
+              let imageUrl = 'https://via.placeholder.com/600x400';
+              const imgs = b.Images || b.images;
+              if (imgs && imgs.length > 0) {
+                if (typeof imgs[0] === 'string') imageUrl = imgs[0];
+                else if (imgs[0].url) imageUrl = imgs[0].url;
+              }
 
-          // Navigation handler: Save ID to localStorage as fallback
-          const navHandler = `
+              const mileage = (b.Mileage || b.mileage)
+                ? Number(b.Mileage || b.mileage).toLocaleString('el-GR') + ' km'
+                : '0 km';
+
+              const bikeId = bike.id || b.id;
+
+              // Generated Link
+              const explicitLink = `bike-detail.html?id=${bikeId}`;
+
+              // Navigation handler: Save ID to localStorage as fallback
+              const navHandler = `
             event.preventDefault(); 
             localStorage.setItem('selectedBikeId', '${bikeId}');
             window.location.href = '${explicitLink}';
           `;
 
-          return `
+              return `
           <article class="bike-card">
             <div class="bike-card__header">
               <h3 class="bike-card__title">${title}</h3>
@@ -530,18 +510,18 @@
             <a href="${explicitLink}" onclick="${navHandler}" class="bike-card__cta">Προβολή</a>
           </article>
           `;
-        }).join('');
-      } catch (error) {
-        console.error('Error loading latest arrivals:', error);
-        latestContainer.innerHTML = `
+            }).join('');
+          } catch (error) {
+            console.error('Error loading latest arrivals:', error);
+            latestContainer.innerHTML = `
           <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #d32f2f;">
             <p>Δεν ήταν δυνατή η φόρτωση των μοτοσυκλετών.</p>
             <small style="color: #666; font-family: monospace;">${error.message}</small>
           </div>
         `;
-      }
-    });
+          });
   </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

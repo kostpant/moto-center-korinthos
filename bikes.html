@@ -905,42 +905,27 @@
       });
     }
 
+    <script src="js/main.js"></script>
+  <script>
     // Initial load
-    async function initStockPage() {
+      async function initStockPage() {
       try {
         // Use the centralized data service (Airtable)
         allBikes = await window.fetchBikes();
-
-        renderListings(allBikes);
-        renderSidebarLatest(allBikes);
-        setupViewToggle();
+      renderListings(allBikes);
+      renderSidebarLatest(allBikes);
+      setupViewToggle();
       } catch (err) {
         console.error('Failed to load bikes:', err);
-        const container = document.getElementById('listingsContainer');
-        if (container) {
-          container.innerHTML = `
-            <div class="no-results">
-              Σφάλμα φόρτωσης. Δοκιμάστε ξανά.
-            </div>
-          `;
+      const container = document.getElementById('listingsContainer');
+      if (container) {
+        container.innerHTML = `<div class="no-results">Σφάλμα φόρτωσης. Δοκιμάστε ξανά.</div>`;
         }
       }
     }
 
-    // Navbar scroll handler
     document.addEventListener('DOMContentLoaded', () => {
-      initStockPage();
-
-      const navbar = document.getElementById('navbar');
-      if (navbar) {
-        navbar.classList.add('navbar--light');
-      }
-
-      window.addEventListener('scroll', () => {
-        if (navbar) {
-          navbar.classList.toggle('scrolled', window.scrollY > 80);
-        }
-      }, { passive: true });
+        initStockPage();
     });
   </script>
 </body>
