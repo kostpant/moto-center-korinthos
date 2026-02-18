@@ -430,6 +430,63 @@
     flex-direction: column;
     text-align: center;
   }
+
+  /* Centering Romans Footer */
+  .romans-footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .romans-footer__address,
+  .romans-footer__phone,
+  .romans-footer__legal,
+  .romans-footer__hours {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .romans-footer__social {
+    justify-content: center;
+  }
+
+  .romans-footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-6);
+  }
+
+  .romans-footer__links {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+}
+
+/* Footer Hours Styling */
+.romans-footer__hours {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.romans-footer__hours-title {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+}
+
+.romans-footer__hours-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
 }
 
 /* ============================================
