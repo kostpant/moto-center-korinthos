@@ -904,27 +904,27 @@
         listBtn.classList.remove('active');
       });
     }
-
-    <script>
+  </script>
+  <script>
     // Initial load
-      async function initStockPage() {
+    async function initStockPage() {
       try {
         // Use the centralized data service (Airtable)
         allBikes = await window.fetchBikes();
-      renderListings(allBikes);
-      renderSidebarLatest(allBikes);
-      setupViewToggle();
+        renderListings(allBikes);
+        renderSidebarLatest(allBikes);
+        setupViewToggle();
       } catch (err) {
         console.error('Failed to load bikes:', err);
-      const container = document.getElementById('listingsContainer');
-      if (container) {
-        container.innerHTML = `<div class="no-results">Σφάλμα φόρτωσης. Δοκιμάστε ξανά.</div>`;
+        const container = document.getElementById('listingsContainer');
+        if (container) {
+          container.innerHTML = `<div class="no-results">Σφάλμα φόρτωσης. Δοκιμάστε ξανά.</div>`;
         }
       }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        initStockPage();
+      initStockPage();
     });
   </script>
   <script src="js/main.js"></script>
