@@ -7,34 +7,41 @@
 :root {
   /* Fonts */
   --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-sans:    'Inter', 'Helvetica Neue', sans-serif;
-  
+  --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+
   /* Romans type scale */
-  --text-nav:      0.72rem;     /* 11.5px */
-  --text-caption:  0.625rem;    /* 10px */
-  --text-body-sm:  0.75rem;     /* 12px */
-  --text-body:     0.875rem;    /* 14px */
-  --text-label:    0.6875rem;   /* 11px */
-  --text-section:  1.75rem;     /* 28px */
-  --text-hero-sub: 1rem;        /* 16px */
-  
+  --text-nav: 0.72rem;
+  /* 11.5px */
+  --text-caption: 0.625rem;
+  /* 10px */
+  --text-body-sm: 0.75rem;
+  /* 12px */
+  --text-body: 0.875rem;
+  /* 14px */
+  --text-label: 0.6875rem;
+  /* 11px */
+  --text-section: 1.75rem;
+  /* 28px */
+  --text-hero-sub: 1rem;
+  /* 16px */
+
   /* Romans spacing */
   --container-max: 1600px;
   --container-pad: 60px;
-  --section-pad:   80px;
-  --card-gap:      32px;
-  --nav-height:    88px;
-  
+  --section-pad: 80px;
+  --card-gap: 32px;
+  --nav-height: 88px;
+
   /* Colors */
-  --color-bg-dark:     #0a0a0a;
-  --color-bg-white:    #ffffff;
-  --color-bg-footer:   #111111;
+  --color-bg-dark: #0a0a0a;
+  --color-bg-white: #ffffff;
+  --color-bg-footer: #111111;
   --color-bg-newsletter: #2c2c2c;
-  --color-text-primary:  #111111;
+  --color-text-primary: #111111;
   --color-text-secondary: #555555;
-  --color-text-muted:    rgba(255,255,255,0.5);
-  --color-border:        #dddddd;
-  --color-border-light:  #e5e5e5;
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+  --color-border: #dddddd;
+  --color-border-light: #e5e5e5;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -50,95 +57,115 @@
   height: 88px;
   background: transparent;
   transition: background 0.35s ease,
-              backdrop-filter 0.35s ease,
-              border-bottom 0.35s ease;
+    backdrop-filter 0.35s ease,
+    border-bottom 0.35s ease;
 }
 
 /* DEFAULT: transparent navbar over dark hero — white links */
 .navbar .navbar__link {
-  color: rgba(255,255,255,0.78);
+  color: rgba(255, 255, 255, 0.78);
 }
+
 .navbar .navbar__link:hover {
   color: #ffffff;
 }
+
 .navbar .navbar__link.active {
   color: #ffffff;
 }
+
 .navbar .logo-main {
   color: #ffffff;
 }
+
 .navbar .logo-sub {
-  color: rgba(255,255,255,0.45);
+  color: rgba(255, 255, 255, 0.45);
 }
+
 .navbar .navbar__phone-icon {
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* SCROLLED: dark frosted glass — links stay WHITE */
 .navbar.scrolled {
-  background: rgba(10,10,10,0.93) !important;
+  background: rgba(10, 10, 10, 0.93) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
+
 .navbar.scrolled .navbar__link {
-  color: rgba(255,255,255,0.8) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
 }
+
 .navbar.scrolled .navbar__link:hover {
   color: #ffffff !important;
 }
+
 .navbar.scrolled .navbar__link.active {
   color: #ffffff !important;
 }
+
 .navbar.scrolled .logo-main {
   color: #ffffff !important;
 }
+
 .navbar.scrolled .logo-sub {
-  color: rgba(255,255,255,0.45) !important;
-  border-top-color: rgba(255,255,255,0.2) !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  border-top-color: rgba(255, 255, 255, 0.2) !important;
 }
+
 .navbar.scrolled .navbar__phone-icon {
-  color: rgba(255,255,255,0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* LIGHT MODE: over white sections — links turn DARK */
 .navbar.navbar--light {
-  background: rgba(255,255,255,0.97) !important;
+  background: rgba(255, 255, 255, 0.97) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.07);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
+
 .navbar.navbar--light .navbar__link {
-  color: rgba(0,0,0,0.6) !important;
+  color: rgba(0, 0, 0, 0.6) !important;
 }
+
 .navbar.navbar--light .navbar__link:hover {
   color: #000000 !important;
 }
+
 .navbar.navbar--light .navbar__link.active {
   color: #000000 !important;
 }
+
 .navbar.navbar--light .logo-main {
   color: #111111 !important;
 }
+
 .navbar.navbar--light .logo-sub {
-  color: rgba(0,0,0,0.4) !important;
-  border-top-color: rgba(0,0,0,0.15) !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+  border-top-color: rgba(0, 0, 0, 0.15) !important;
 }
+
 .navbar.navbar--light .navbar__phone-icon {
-  color: rgba(0,0,0,0.55) !important;
+  color: rgba(0, 0, 0, 0.55) !important;
 }
 
 /* LIGHT + SCROLLED: white page, scrolled down — dark links */
 .navbar.navbar--light.scrolled {
-  background: rgba(255,255,255,0.98) !important;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .navbar.navbar--light.scrolled .navbar__link {
-  color: rgba(0,0,0,0.65) !important;
+  color: rgba(0, 0, 0, 0.65) !important;
 }
+
 .navbar.navbar--light.scrolled .navbar__link:hover {
   color: #000000 !important;
 }
+
 .navbar.navbar--light.scrolled .logo-main {
   color: #111111 !important;
 }
@@ -198,12 +225,12 @@
   font-size: 0.62rem;
   font-weight: 300;
   letter-spacing: 0.45em;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255, 255, 255, 0.45);
   display: block;
   text-align: center;
   margin-top: 4px;
   padding-top: 4px;
-  border-top: 1px solid rgba(255,255,255,0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   white-space: nowrap;
 }
 
@@ -214,7 +241,7 @@
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.78);
+  color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   white-space: nowrap;
   position: relative;
@@ -241,7 +268,7 @@
 
 /* Phone icon — larger */
 .navbar__phone-icon {
-  color: rgba(255,255,255,0.65);
+  color: rgba(255, 255, 255, 0.65);
   transition: color 0.25s ease;
   display: flex;
   align-items: center;
@@ -276,14 +303,14 @@
   display: block;
   width: 22px;
   height: 1px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   margin: 5px 0;
   transition: all 0.3s ease;
 }
 
 .navbar--light .navbar__hamburger span,
 .navbar.scrolled .navbar__hamburger span {
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -292,7 +319,8 @@
 
 .latest-arrivals {
   background: #ffffff;
-  padding: 40px 0; /* Reduced from 80px */
+  padding: 40px 0;
+  /* Reduced from 80px */
 }
 
 .latest-arrivals .container {
@@ -316,7 +344,8 @@
   width: 50px;
   height: 1px;
   background: #111111;
-  margin: 16px auto 30px; /* Reduced bottom margin from 60px */
+  margin: 16px auto 30px;
+  /* Reduced bottom margin from 60px */
 }
 
 .arrivals-grid {
@@ -335,23 +364,26 @@
 }
 
 .bike-card__header {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  /* Tighter title spacing */
 }
 
 .bike-card__title {
   font-family: 'Inter', sans-serif;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
+  /* Slightly larger */
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #111111;
-  line-height: 1.45;
+  line-height: 1.2;
   margin: 0;
 }
 
 .bike-card__img-wrap {
   width: 100%;
-  aspect-ratio: 290 / 190;
+  aspect-ratio: 4 / 3;
+  /* Standardize ratio */
   overflow: hidden;
   background: #f0f0f0;
   display: block;
@@ -370,42 +402,52 @@
 }
 
 .bike-card__specs {
-  padding-top: 16px;
+  padding-top: 12px;
+  /* Reduced from 16px */
   padding-bottom: 8px;
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  /* Tight row gap */
 }
 
 .bike-card__spec-row {
   display: flex;
   align-items: baseline;
-  padding: 5px 0;
+  padding: 2px 0;
+  /* Reduced padding */
+  width: 100%;
 }
 
 .bike-card__spec-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.625rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #111111;
-  min-width: 80px;
+  margin-right: 6px;
   flex-shrink: 0;
 }
 
 .bike-card__spec-value {
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
-  font-weight: 300;
-  color: #555555;
-  flex: 1;
+  font-weight: 400;
+  color: #333333;
+  /* Darker for better visibility */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bike-card__price {
   font-family: 'Inter', sans-serif;
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #111111;
   margin-left: auto;
+  /* Pushes price to the far right */
   white-space: nowrap;
 }
 
@@ -416,8 +458,8 @@
 .bike-card__divider {
   width: 100%;
   height: 1px;
-  background: #dddddd;
-  margin-top: 12px;
+  background: #e0e0e0;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
@@ -426,13 +468,14 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 52px;
+  height: 44px;
+  /* Slightly shorter button */
   background: #111111;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
   border: none;
@@ -483,7 +526,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   font-weight: 300;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .newsletter-strip__form {
@@ -497,7 +540,7 @@
   width: 320px;
   height: 48px;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-right: none;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
@@ -507,7 +550,7 @@
 }
 
 .newsletter-strip__input::placeholder {
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .newsletter-strip__btn {
@@ -569,12 +612,12 @@
   font-size: 0.6rem;
   font-weight: 300;
   letter-spacing: 0.45em;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
   display: block;
   text-align: center;
   margin-top: 4px;
   padding-top: 4px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .romans-footer__address {
@@ -582,7 +625,7 @@
   font-size: 0.7rem;
   font-weight: 300;
   letter-spacing: 0.15em;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
   text-align: center;
   margin: 20px auto 0;
   text-transform: uppercase;
@@ -596,7 +639,7 @@
 }
 
 .romans-footer__social-link {
-  color: rgba(255,255,255,0.45);
+  color: rgba(255, 255, 255, 0.45);
   transition: color 0.25s ease;
   display: flex;
   align-items: center;
@@ -619,7 +662,7 @@
   font-size: 1.75rem;
   font-weight: 300;
   letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   margin: 8px auto 24px;
   transition: color 0.25s ease;
@@ -633,7 +676,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.6rem;
   font-weight: 300;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
   text-align: center;
   max-width: 700px;
   margin: 0 auto 40px;
@@ -642,7 +685,7 @@
 }
 
 .romans-footer__bottom {
-  border-top: 1px solid rgba(255,255,255,0.07);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
   padding: 20px 40px;
   max-width: 1400px;
   margin: 0 auto;
@@ -656,7 +699,7 @@
   font-size: 0.6rem;
   font-weight: 300;
   letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.22);
+  color: rgba(255, 255, 255, 0.22);
   text-transform: uppercase;
 }
 
@@ -670,14 +713,14 @@
   font-size: 0.6rem;
   font-weight: 300;
   letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.22);
+  color: rgba(255, 255, 255, 0.22);
   text-transform: uppercase;
   text-decoration: none;
   transition: color 0.25s ease;
 }
 
 .romans-footer__link:hover {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -686,57 +729,67 @@
 
 /* Mobile — hamburger navbar under 992px */
 @media (max-width: 992px) {
-  .navbar__inner { 
-    padding: 0 24px; 
+  .navbar__inner {
+    padding: 0 24px;
   }
-  .navbar__left { 
-    display: none; 
+
+  .navbar__left {
+    display: none;
   }
-  .navbar__right { 
-    display: none; 
+
+  .navbar__right {
+    display: none;
   }
-  .navbar__hamburger { 
-    display: flex; 
+
+  .navbar__hamburger {
+    display: flex;
     grid-column: 3;
     justify-self: flex-end;
   }
-  .navbar__logo { 
-    min-width: 0; 
+
+  .navbar__logo {
+    min-width: 0;
   }
-  .logo-main { 
-    font-size: 1.3rem; 
+
+  .logo-main {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 1200px) {
-  .arrivals-grid { 
-    grid-template-columns: repeat(2, 1fr); 
+  .arrivals-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .arrivals-grid { 
-    grid-template-columns: 1fr; 
-    gap: 40px; 
+  .arrivals-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  .newsletter-strip__inner { 
-    flex-direction: column; 
+
+  .newsletter-strip__inner {
+    flex-direction: column;
     gap: 24px;
     padding: 0 20px;
   }
+
   .newsletter-strip__form {
     width: 100%;
     justify-content: center;
   }
-  .newsletter-strip__input { 
-    width: 240px; 
+
+  .newsletter-strip__input {
+    width: 240px;
   }
+
   .latest-arrivals .container,
   .romans-footer__inner,
   .romans-footer__bottom {
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .romans-footer__bottom {
     flex-direction: column;
     gap: 12px;
