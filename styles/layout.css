@@ -212,6 +212,25 @@
   background: #111111 !important;
 }
 
+/* White state when menu is open */
+.navbar.menu-open {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar.menu-open .logo-main,
+.navbar.menu-open .logo-sub {
+  color: #111111 !important;
+}
+
+.navbar.menu-open .navbar__hamburger span {
+  background: #111111 !important;
+}
+
+.navbar.menu-open .navbar__phone-icon {
+  color: #111111 !important;
+}
+
 .navbar__mobile.active {
   display: flex;
 }

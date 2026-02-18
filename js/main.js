@@ -14,7 +14,7 @@ function initNavigation() {
   const navbar = document.getElementById('navbar');
   const navbarToggle = document.getElementById('navbarToggle');
   const navbarMobile = document.getElementById('navbarMobile');
-  
+
   // FIX 2 — NAVBAR MUST FLOAT OVER THE HERO
   // Toggle scrolled class on scroll (passive for performance)
   window.addEventListener('scroll', () => {
@@ -23,36 +23,37 @@ function initNavigation() {
       navbarEl.classList.toggle('scrolled', window.scrollY > 80);
     }
   }, { passive: true });
-  
+
   // Legacy: Also toggle navbar--scrolled for backwards compatibility
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     // Add scrolled class when scrolling down
     if (currentScroll > 100) {
       navbar.classList.add('navbar--scrolled');
     } else {
       // Only remove if we're on the homepage
-      if (!window.location.pathname.includes('bikes') && 
-          !window.location.pathname.includes('services') &&
-          !window.location.pathname.includes('contact') &&
-          !window.location.pathname.includes('detail')) {
+      if (!window.location.pathname.includes('bikes') &&
+        !window.location.pathname.includes('services') &&
+        !window.location.pathname.includes('contact') &&
+        !window.location.pathname.includes('detail')) {
         navbar.classList.remove('navbar--scrolled');
       }
     }
-    
+
     lastScroll = currentScroll;
   });
-  
+
   // Mobile menu toggle
   if (navbarToggle && navbarMobile) {
     navbarToggle.addEventListener('click', () => {
       navbarToggle.classList.toggle('active');
       navbarMobile.classList.toggle('active');
+      navbar.classList.toggle('menu-open');
       document.body.style.overflow = navbarMobile.classList.contains('active') ? 'hidden' : '';
     });
-    
+
     // Close mobile menu when clicking a link
     const mobileLinks = navbarMobile.querySelectorAll('a');
     mobileLinks.forEach(link => {
@@ -75,7 +76,7 @@ function initScrollAnimations() {
     rootMargin: '0px',
     threshold: 0.1
   };
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -84,12 +85,12 @@ function initScrollAnimations() {
       }
     });
   }, observerOptions);
-  
+
   // Observe all elements with reveal classes
   const revealElements = document.querySelectorAll(
     '.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-children'
   );
-  
+
   revealElements.forEach(el => observer.observe(el));
 }
 
@@ -113,7 +114,7 @@ function debounce(func, wait) {
  */
 function throttle(func, limit) {
   let inThrottle;
-  return function(...args) {
+  return function (...args) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;
@@ -127,7 +128,7 @@ function throttle(func, limit) {
  */
 function lazyLoadImages() {
   const images = document.querySelectorAll('img[data-src]');
-  
+
   const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -139,7 +140,7 @@ function lazyLoadImages() {
       }
     });
   });
-  
+
   images.forEach(img => imageObserver.observe(img));
 }
 
