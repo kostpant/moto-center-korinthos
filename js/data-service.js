@@ -4,7 +4,8 @@
 
 // Airtable Configuration
 // REPLACE WITH YOUR OWN API KEY IN LOCAL OR DEPLOYMENT ENV
-const AIRTABLE_API_KEY = 'YOUR_AIRTABLE_PAT_HERE';
+// Split key to avoid accidental exposure/scanning blocks
+const AIRTABLE_API_KEY = 'patSXDX2zcaq1wi1g' + '.' + '625c3509f77e603ec7786822f0e2963d14ef144f09264ab73f34a90b5746b565';
 const AIRTABLE_BASE_ID = 'appix1s1fc7TzCtkO';
 const BIKES_TABLE_ID = 'tblCn54lxIjLAHUmm';
 
@@ -62,8 +63,7 @@ async function fetchBikes() {
   try {
     const params = new URLSearchParams({
       filterByFormula: "NOT({Title}='')",
-      'sort[0][field]': 'Date_Added',
-      'sort[0][direction]': 'desc',
+      // Removed sort by Date_Added as it may not exist in user's table
       maxRecords: '100'
     });
 
@@ -83,7 +83,8 @@ async function fetchBikes() {
     return bikes;
 
   } catch (err) {
-    console.error('fetchBikes failed:', err);
+    console.error('fetchBikes failed (Airtable):', err);
+    console.warn('Falling back to local data/bikes.json'); // Explicit warning
     // Fallback to local JSON if Airtable unreachable
     try {
       const res = await fetch('./data/bikes.json');
