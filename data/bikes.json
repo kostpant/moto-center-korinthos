@@ -1,0 +1,317 @@
+[
+  {
+    "id": "rec1",
+    "createdTime": "2025-01-15T10:00:00.000Z",
+    "fields": {
+      "Title": "SYM Symphony ST 200",
+      "Brand": "SYM",
+      "Category": "Scooter",
+      "Price": 2695,
+      "Year": 2025,
+      "Mileage": 0,
+      "Engine_CC": 200,
+      "Color": "Μαύρο Ματ",
+      "Description": "Ολοκαίνουριο SYM Symphony ST 200. Ιδανικό για την πόλη με άνετη θέση οδήγησης και μεγάλο αποθηκευτικό χώρο. Διαθέσιμο άμεσα με πλήρη εγγύηση κατασκευαστή.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1615172282427-9a57e4e8dede?w=800&h=500&fit=crop" }
+      ],
+      "Featured": true,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec2",
+    "createdTime": "2025-01-14T09:30:00.000Z",
+    "fields": {
+      "Title": "SYM Maxsym 400i",
+      "Brand": "SYM",
+      "Category": "Scooter",
+      "Price": 6990,
+      "Year": 2024,
+      "Mileage": 2500,
+      "Engine_CC": 400,
+      "Color": "Λευκό",
+      "Description": "Άριστη κατάσταση SYM Maxsym 400i. Ιδανικό για μεγάλες αποστάσεις με άνετη θέση οδήγησης. Όλα τα service στην ώρα τους.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=800&h=500&fit=crop" }
+      ],
+      "Featured": true,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec3",
+    "createdTime": "2025-01-13T14:20:00.000Z",
+    "fields": {
+      "Title": "Kawasaki Z900",
+      "Brand": "KAWASAKI",
+      "Category": "Naked",
+      "Price": 9990,
+      "Year": 2023,
+      "Mileage": 8500,
+      "Engine_CC": 948,
+      "Color": "Πράσινο KRT",
+      "Description": "Kawasaki Z900 σε εξαιρετική κατάσταση. Ισχυρός κινητήρας 948cc με άμεση απόδοση. Εξοπλισμένο με quickshifter και LED φωτισμό.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=800&h=500&fit=crop" }
+      ],
+      "Featured": true,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec4",
+    "createdTime": "2025-01-12T11:00:00.000Z",
+    "fields": {
+      "Title": "DAYTONA Velona 125",
+      "Brand": "DAYTONA",
+      "Category": "Naked",
+      "Price": 1890,
+      "Year": 2025,
+      "Mileage": 0,
+      "Engine_CC": 125,
+      "Color": "Κόκκινο",
+      "Description": "Ολοκαίνουριο DAYTONA Velona 125. Ιδανικό για αρχάριους με χαμηλό κόστος συντήρησης και εξαιρετική οικονομία καυσίμου.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800&h=500&fit=crop" }
+      ],
+      "Featured": true,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec5",
+    "createdTime": "2025-01-11T16:45:00.000Z",
+    "fields": {
+      "Title": "SYM Cruisym 300",
+      "Brand": "SYM",
+      "Category": "Scooter",
+      "Price": 4590,
+      "Year": 2024,
+      "Mileage": 3200,
+      "Engine_CC": 300,
+      "Color": "Μπλε",
+      "Description": "SYM Cruisym 300 σε άριστη κατάσταση. Μεγάλος scooter με άνετη θέση για δύο άτομα. Άμεση διαθεσιμότητα.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1609630875171-b1321377ee53?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec6",
+    "createdTime": "2025-01-10T10:30:00.000Z",
+    "fields": {
+      "Title": "Kawasaki Ninja 650",
+      "Brand": "KAWASAKI",
+      "Category": "Sport",
+      "Price": 8490,
+      "Year": 2023,
+      "Mileage": 12000,
+      "Engine_CC": 649,
+      "Color": "Μαύρο",
+      "Description": "Kawasaki Ninja 650 σε πολύ καλή κατάσταση. Ελαφρύ sport bike με φιλική συμπεριφορά. Ιδανικό για καθημερινή χρήση και διασκέδαση.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec7",
+    "createdTime": "2025-01-09T13:15:00.000Z",
+    "fields": {
+      "Title": "MODENAS Kriss 125",
+      "Brand": "MODENAS",
+      "Category": "Scooter",
+      "Price": 1590,
+      "Year": 2025,
+      "Mileage": 0,
+      "Engine_CC": 125,
+      "Color": "Μαύρο",
+      "Description": "Οικονομικό scooter MODENAS Kriss 125. Ιδανικό για τις καθημερινές μετακινήσεις στην πόλη. Χαμηλή κατανάλωση και εύκολο στη συντήρηση.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec8",
+    "createdTime": "2025-01-08T09:00:00.000Z",
+    "fields": {
+      "Title": "QUADRO QV3 350",
+      "Brand": "QUADRO",
+      "Category": "Scooter",
+      "Price": 7290,
+      "Year": 2024,
+      "Mileage": 1800,
+      "Engine_CC": 350,
+      "Color": "Ασημί",
+      "Description": "QUADRO QV3 350 με μοναδικό σύστημα 3 τροχών. Μέγιστη σταθερότητα και ασφάλεια. Άριστη κατάσταση με πλήρη ιστορικό service.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1605816988079-15d32c5decb1?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec9",
+    "createdTime": "2025-01-07T15:30:00.000Z",
+    "fields": {
+      "Title": "DAYTONA Motors 250",
+      "Brand": "DAYTONA",
+      "Category": "Naked",
+      "Price": 2450,
+      "Year": 2024,
+      "Mileage": 4500,
+      "Engine_CC": 250,
+      "Color": "Γκρι",
+      "Description": "DAYTONA Motors 250 σε πολύ καλή κατάσταση. Ιδανικό για καθημερινή χρήση και ταξίδια. Οικονομικό και αξιόπιστο.",
+      "Status": "Sold",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1596774823028-c05a96a09e7c?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec10",
+    "createdTime": "2025-01-06T11:45:00.000Z",
+    "fields": {
+      "Title": "SYM HD2 200",
+      "Brand": "SYM",
+      "Category": "Scooter",
+      "Price": 2290,
+      "Year": 2025,
+      "Mileage": 0,
+      "Engine_CC": 200,
+      "Color": "Λευκό",
+      "Description": "Νέο SYM HD2 200 με μοντέρνο σχεδιασμό και πλούσιο εξοπλισμό. Μεγάλος αποθηκευτικός χώρος και άνεση για δύο επιβάτες.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec11",
+    "createdTime": "2025-01-05T14:00:00.000Z",
+    "fields": {
+      "Title": "Kawasaki Versys 650",
+      "Brand": "KAWASAKI",
+      "Category": "Touring",
+      "Price": 9490,
+      "Year": 2022,
+      "Mileage": 18500,
+      "Engine_CC": 649,
+      "Color": "Πράσινο",
+      "Description": "Kawasaki Versys 650 - Το απόλυτο touring μηχανάκι. Άνεση για μεγάλες αποστάσεις με προστασία από τον αέρα. Πλήρως εξοπλισμένο.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1568284280238-894834bb717a?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec12",
+    "createdTime": "2025-01-04T10:15:00.000Z",
+    "fields": {
+      "Title": "SYM Wolf 250",
+      "Brand": "SYM",
+      "Category": "Naked",
+      "Price": 3290,
+      "Year": 2024,
+      "Mileage": 1500,
+      "Engine_CC": 250,
+      "Color": "Μαύρο Ματ",
+      "Description": "SYM Wolf 250 σε άριστη κατάσταση. Ατσάλινη σιλουέτα με επιθετικό σχεδιασμό. Ιδανικό για νέους οδηγούς.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec13",
+    "createdTime": "2025-01-03T16:30:00.000Z",
+    "fields": {
+      "Title": "DAYTONA DY-R 300",
+      "Brand": "DAYTONA",
+      "Category": "Sport",
+      "Price": 3890,
+      "Year": 2023,
+      "Mileage": 6800,
+      "Engine_CC": 300,
+      "Color": "Κόκκινο",
+      "Description": "DAYTONA DY-R 300 - Sport σχεδιασμός με επιδόσεις. Άριστη κατάσταση με πλήρες ιστορικό service.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1609630875171-b1321377ee53?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec14",
+    "createdTime": "2025-01-02T09:45:00.000Z",
+    "fields": {
+      "Title": "Kawasaki Z400",
+      "Brand": "KAWASAKI",
+      "Category": "Naked",
+      "Price": 6490,
+      "Year": 2024,
+      "Mileage": 2500,
+      "Engine_CC": 399,
+      "Color": "Πράσινο KRT",
+      "Description": "Kawasaki Z400 σχεδόν καινούριο. Ελαφρύ και ευέλικτο naked bike. Ιδανικό για καθημερινή χρήση και διασκέδαση.",
+      "Status": "Sold",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  },
+  {
+    "id": "rec15",
+    "createdTime": "2025-01-01T13:00:00.000Z",
+    "fields": {
+      "Title": "SYM Fiddle 125",
+      "Brand": "SYM",
+      "Category": "Scooter",
+      "Price": 2295,
+      "Year": 2025,
+      "Mileage": 0,
+      "Engine_CC": 125,
+      "Color": "Μπεζ",
+      "Description": "SYM Fiddle 125 με vintage σχεδιασμό. Ιδανικό για στυλάτες μετακινήσεις στην πόλη. Άμεσα διαθέσιμο.",
+      "Status": "Available",
+      "Images": [
+        { "url": "https://images.unsplash.com/photo-1615172282427-9a57e4e8dede?w=800&h=500&fit=crop" }
+      ],
+      "Featured": false,
+      "Car_GR_Link": ""
+    }
+  }
+]

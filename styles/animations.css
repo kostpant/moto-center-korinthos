@@ -1,0 +1,959 @@
+/* animations.css - Keyframes and specific animation classes */
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Left */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade In Right */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide In from Left */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slide In from Right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Rotate */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   ANIMATION UTILITY CLASSES
+   ============================================ */
+
+.animate {
+  animation-fill-mode: both;
+}
+
+.animate--fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
+}
+
+.animate--fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 0.6s;
+}
+
+.animate--fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 0.6s;
+}
+
+.animate--fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 0.6s;
+}
+
+.animate--fadeInRight {
+  animation-name: fadeInRight;
+  animation-duration: 0.6s;
+}
+
+.animate--scaleIn {
+  animation-name: scaleIn;
+  animation-duration: 0.5s;
+}
+
+.animate--pulse {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.animate--bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* Animation delays */
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+
+/* ═══════════════════════════════════════════════════════════
+   HERO SCROLL ANIMATION STYLES — Complete rewrite
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── PIN WRAPPER ─────────────────────────────────────────
+   This is the scroll distance. The taller this is,
+   the slower the animation plays. 
+   300vh = animation plays over 3 full screen-heights of scroll */
+
+.hero__pin {
+  position: relative;
+  height: 300vh;        /* Scroll distance — tune this */
+  width: 100%;
+}
+
+/* ── STICKY CONTAINER ────────────────────────────────────
+   Sticks to viewport while parent is being scrolled through */
+
+.hero__sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 620px;
+  overflow: hidden;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── CANVAS ──────────────────────────────────────────────
+   Fills the sticky container completely */
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover equivalent is handled in JS */
+}
+
+/* ── OVERLAY ─────────────────────────────────────────────*/
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.35) 30%,
+    rgba(0,0,0,0.30) 55%,
+    rgba(0,0,0,0.65) 82%,
+    rgba(0,0,0,0.90) 100%
+  );
+}
+
+/* ── GRID TEXTURE ────────────────────────────────────────*/
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── RED BOTTOM GLOW ─────────────────────────────────────*/
+
+.hero__glow {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: none;
+  display: none;
+}
+
+/* ── CONTENT ─────────────────────────────────────────────*/
+
+.hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 clamp(1rem, 6vw, 4rem);
+  max-width: 960px;
+  width: 100%;
+  margin-top: -40px;
+}
+
+/* ── HERO TYPOGRAPHY — Romans luxury style ──────────────── */
+
+.hero__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: rgba(255,255,255,0.45);  /* NOT red — more like Romans */
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.hero__line {
+  display: block;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero__line--1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(5rem, 13vw, 12rem);
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 0.9;
+}
+
+.hero__line--2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(5rem, 13vw, 12rem);
+  font-weight: 300;           /* thin weight = luxury contrast */
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.45);
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+}
+
+.hero__line--3 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  font-weight: 300;
+  letter-spacing: 0.45em;     /* very wide spacing = editorial */
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+  -webkit-text-stroke: 0;
+}
+
+.hero__sub {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.75rem, 1.1vw, 0.88rem);
+  font-weight: 300;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.08em;
+  line-height: 2;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+}
+
+/* ── HERO BUTTONS — Romans ghost/outline style ──────────── */
+
+.hero__cta-group {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.45s, transform 0.8s ease 0.45s;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.8rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;           /* Sharp corners like Romans */
+  transition: all 0.35s ease;
+}
+
+/* Primary becomes a refined outlined button, not solid red */
+.hero__btn--primary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.6);
+}
+.hero__btn--primary:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: #ffffff;
+  transform: none;            /* No lift effect — stays flat */
+  box-shadow: none;
+}
+
+/* Secondary becomes even more minimal */
+.hero__btn--ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.hero__btn--ghost:hover {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* ── BRAND STRIP — Romans editorial style ──────────────── */
+
+.hero__brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  opacity: 0;
+  transition: opacity 0.8s ease 0.6s;
+}
+
+.hero__brand-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 300;
+  letter-spacing: 0.35em;
+  color: rgba(255,255,255,0.22);
+  text-transform: uppercase;
+}
+
+.hero__brand-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__brand-list span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.38);
+  text-transform: uppercase;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.hero__brand-list span:hover {
+  color: rgba(255,255,255,0.75);  /* No red — editorial hover */
+}
+
+/* ── SCROLL INDICATOR ────────────────────────────────────*/
+
+.hero__scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hero__scroll.visible { opacity: 1; }
+
+.hero__scroll-text {
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.3);
+  font-weight: 600;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
+  animation: scrollPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%   { transform: scaleY(0); transform-origin: top;    }
+  49%  { transform: scaleY(1); transform-origin: top;    }
+  50%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ── PROGRESS BAR ────────────────────────────────────────*/
+
+.hero__progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255,255,255,0.08);
+  z-index: 20;
+}
+
+.hero__progress-bar {
+  height: 100%;
+  width: 0%;
+  background: rgba(255,255,255,0.5);
+  transition: width 0.05s linear;
+}
+
+/* ── MOBILE ──────────────────────────────────────────────*/
+
+@media (max-width: 768px) {
+  .hero__pin { height: 250vh; }
+  .hero__line--1,
+  .hero__line--2 { font-size: clamp(3rem, 14vw, 5rem); }
+  .hero__line--2 { -webkit-text-stroke-width: 1.5px; }
+  .hero__line--3 { font-size: clamp(1rem, 4vw, 1.4rem); }
+  .hero__cta-group { flex-direction: column; align-items: center; }
+  .hero__btn { width: 100%; max-width: 280px; justify-content: center; }
+  .hero__grid { background-size: 30px 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-line { animation: none; opacity: 0.4; }
+}
+
+/* FIX 3 — LAYER STACK (z-index order) */
+/* Layer 1 — Background photo container */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* Layer 2 — Gradient overlay (controls the mood) */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.88) 0%,
+    rgba(0,0,0,0.50) 25%,
+    rgba(0,0,0,0.40) 55%,
+    rgba(0,0,0,0.78) 82%,
+    rgba(0,0,0,0.95) 100%
+  );
+}
+
+/* Layer 3 — Subtle grid texture */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Layer 4 — No glow (Romans style) */
+.hero__glow {
+  display: none;
+}
+
+/* Layer 5 — Content (text + buttons) */
+.hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  max-width: 1000px;
+  padding: 0 var(--container-padding);
+}
+
+/* FIX 6 — TYPOGRAPHY POLISH */
+.hero__title {
+  font-family: 'Oswald', sans-serif;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.hero__line--1 {
+  font-size: clamp(4.5rem, 12vw, 10rem);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero__line--2 {
+  font-size: clamp(4.5rem, 12vw, 10rem);
+  font-weight: 700;
+  -webkit-text-stroke: 2px rgba(255,255,255,0.55);
+  color: transparent;
+}
+
+.hero__line--3 {
+  font-size: clamp(1.2rem, 3vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.65);
+  margin-top: 0.75rem;
+  -webkit-text-stroke: 0;
+}
+
+.hero__eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.hero__sub {
+  font-size: clamp(0.78rem, 1.3vw, 0.95rem);
+  color: rgba(255,255,255,0.45);
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FIX 7 — CTA BUTTONS */
+.hero__cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero__btn--primary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.hero__btn--primary:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: #ffffff;
+  transform: none;
+  box-shadow: none;
+}
+
+.hero__btn--ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.hero__btn--ghost:hover {
+  border-color: #ffffff;
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-3px);
+}
+
+/* FIX 8 — BRAND STRIP AT BOTTOM */
+.hero__brands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero__brand-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+}
+
+.hero__brand-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__brand-list span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.hero__brand-list span:hover {
+  color: rgba(255,255,255,0.85);
+}
+
+/* FIX 5 — SCROLL INDICATOR */
+.hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero__scroll-text {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.35);
+  font-weight: 600;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  animation: scrollPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%   { transform: scaleY(0); transform-origin: top;    opacity: 1; }
+  49%  { transform: scaleY(1); transform-origin: top;    opacity: 1; }
+  50%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+/* Legacy selectors for backwards compatibility (to be removed) */
+.hero__subtitle,
+.hero__tagline,
+.hero__cta {
+  display: none;
+}
+
+/* ============================================
+   SCROLL TRIGGERED ANIMATIONS
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-surface) 25%, #e0e0e0 50%, var(--color-surface) 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+  border-radius: var(--border-radius);
+}
+
+.skeleton--card {
+  height: 400px;
+}
+
+.skeleton--text {
+  height: 20px;
+  margin-bottom: var(--space-2);
+}
+
+.skeleton--title {
+  height: 32px;
+  width: 60%;
+  margin-bottom: var(--space-4);
+}
+
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
+
+.hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+  transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-glow {
+  transition: box-shadow var(--transition-base);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   MOBILE MENU ANIMATION
+   ============================================ */
+
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* ============================================
+   IMAGE LOADING
+   ============================================ */
+
+.img-loading {
+  background: var(--color-surface);
+  animation: pulse 1.5s infinite;
+}
+
+.img-loaded {
+  animation: fadeIn 0.3s ease;
+}
+
+/* FIX 9 — MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .hero__line--1,
+  .hero__line--2 {
+    font-size: clamp(3rem, 14vw, 5rem);
+    -webkit-text-stroke-width: 1.5px;
+  }
+  .hero__line--3 {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    letter-spacing: 0.15em;
+  }
+  .hero__cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  .hero__grid {
+    background-size: 30px 30px;
+  }
+  .hero__brands {
+    gap: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-line { animation: none; opacity: 0.4; }
+}

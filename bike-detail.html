@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Λεπτομέρειες Μοτοσυκλέτας | MOTO CENTER</title>
+  <meta name="description"
+    content="Λεπτομερείς πληροφορίες για τη μοτοσυκλέτα. Τεχνικά χαρακτηριστικά, φωτογραφίες και τιμή.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/romans-components.css">
+  <link rel="stylesheet" href="styles/romans-exact.css">
+  <link rel="stylesheet" href="styles/hero-typography.css">
+
+  <style>
+    /* Detail Page - Romans Style */
+    .detail-page {
+      background: #ffffff;
+      padding-top: 88px;
+      min-height: 100vh;
+    }
+
+    /* Breadcrumb */
+    .detail-breadcrumb {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 16px 0;
+      background: #ffffff;
+    }
+
+    .detail-breadcrumb__inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .detail-breadcrumb__link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #888888;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .detail-breadcrumb__link:hover {
+      color: #111111;
+    }
+
+    /* Main layout */
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 48px 40px 60px;
+      align-items: start;
+    }
+
+    /* Gallery */
+    .detail-gallery__main {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #f0f0f0;
+    }
+
+    .detail-gallery__main-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .detail-gallery__thumbs {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .detail-gallery__thumb {
+      aspect-ratio: 1;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+      background: #f0f0f0;
+    }
+
+    .detail-gallery__thumb:hover,
+    .detail-gallery__thumb.active {
+      opacity: 1;
+      outline: 2px solid #111111;
+    }
+
+    .detail-gallery__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Specs panel */
+    .detail-panel {
+      position: sticky;
+      top: 108px;
+    }
+
+    .detail-panel__header {
+      margin-bottom: 16px;
+    }
+
+    .detail-panel__title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #111111;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .detail-panel__rule {
+      width: 100%;
+      height: 1px;
+      background: #e5e5e5;
+      margin-bottom: 20px;
+    }
+
+    /* Spec rows */
+    .detail-panel__specs {
+      margin-bottom: 28px;
+    }
+
+    .spec-row {
+      display: flex;
+      align-items: baseline;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .spec-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #111111;
+      min-width: 120px;
+      flex-shrink: 0;
+    }
+
+    .spec-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: #444444;
+      flex: 1;
+    }
+
+    .spec-price {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111111;
+    }
+
+    /* Action buttons */
+    .detail-panel__actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .detail-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .detail-btn--primary {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .detail-btn--primary:hover {
+      background: #333333;
+    }
+
+    .detail-btn--secondary {
+      background: transparent;
+      color: #111111;
+      border: 1px solid #cccccc;
+    }
+
+    .detail-btn--secondary:hover {
+      border-color: #111111;
+      background: #f8f8f8;
+    }
+
+    /* Share */
+    .detail-panel__share {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .detail-share-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: #888888;
+      text-transform: uppercase;
+    }
+
+    .detail-share-link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: #555555;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #cccccc;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .detail-share-link:hover {
+      color: #111111;
+      border-color: #111111;
+    }
+
+    /* Description section */
+    .detail-description {
+      background: #fafafa;
+      border-top: 1px solid #e5e5e5;
+      padding: 60px 0;
+    }
+
+    .detail-description__inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .detail-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #111111;
+      text-align: center;
+      margin: 0;
+    }
+
+    .detail-section-rule {
+      width: 50px;
+      height: 1px;
+      background: #111111;
+      margin: 14px auto 36px;
+    }
+
+    .detail-description__text {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: #444444;
+      line-height: 2;
+      letter-spacing: 0.02em;
+    }
+
+    /* Back link */
+    .detail-back {
+      padding: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .detail-back__link {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #888888;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .detail-back__link:hover {
+      color: #111111;
+    }
+
+    /* Error state */
+    .detail-error {
+      padding: 120px 40px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      color: #888;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+    }
+
+    .detail-error a {
+      color: #111;
+      text-decoration: underline;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .detail-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .detail-panel {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .detail-layout {
+        padding: 24px 20px 40px;
+      }
+
+      .detail-gallery__thumbs {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <nav class="navbar__left">
+        <a href="index.html" class="navbar__link">HOME</a>
+        <a href="bikes.html" class="navbar__link active">SHOWROOM</a>
+      </nav>
+      <a href="index.html" class="navbar__logo">
+        <span class="logo-main">MOTO CENTER</span>
+        <span class="logo-sub">ΕΥΜΟΡΦΙΑΔΗΣ</span>
+      </a>
+      <nav class="navbar__right">
+        <a href="services.html" class="navbar__link">ΥΠΗΡΕΣΙΕΣ</a>
+        <a href="contact.html" class="navbar__link">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        <a href="tel:2741083014" class="navbar__phone-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2 c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20 c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5 c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+          </svg>
+        </a>
+      </nav>
+      <button class="navbar__hamburger" id="navbarToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="navbar__mobile" id="navbarMobile">
+      <a href="index.html" class="navbar__link">HOME</a>
+      <a href="bikes.html" class="navbar__link active">SHOWROOM</a>
+      <a href="services.html" class="navbar__link">ΥΠΗΡΕΣΙΕΣ</a>
+      <a href="contact.html" class="navbar__link">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="detail-page" id="bikeDetail">
+    <!-- Content will be rendered by JavaScript -->
+  </main>
+
+  <!-- Newsletter Strip -->
+  <section class="newsletter-strip">
+    <div class="newsletter-strip__inner">
+      <div class="newsletter-strip__content">
+        <h3 class="newsletter-strip__title">Μείνετε Ενημερωμένοι</h3>
+        <p class="newsletter-strip__subtitle">Εγγραφείτε για να λαμβάνετε νέα και προσφορές</p>
+      </div>
+      <form class="newsletter-strip__form" onsubmit="event.preventDefault(); alert('Ευχαριστούμε για την εγγραφή!');">
+        <input type="email" class="newsletter-strip__input" placeholder="ΤΟ EMAIL ΣΑΣ" required>
+        <button type="submit" class="newsletter-strip__btn">ΕΓΓΡΑΦΗ</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="romans-footer">
+    <div class="romans-footer__inner">
+      <div class="romans-footer__logo">
+        <span class="romans-footer__logo-main">MOTO CENTER</span>
+        <span class="romans-footer__logo-sub">ΕΥΜΟΡΦΙΑΔΗΣ</span>
+      </div>
+      <p class="romans-footer__address">ΛΕΩΦ. ΙΩΝΙΑΣ & Μ. ΜΠΟΤΣΑΡΗ 26, ΚΟΡΙΝΘΟΣ 20100</p>
+      <div class="romans-footer__social">
+        <a href="#" class="romans-footer__social-link" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+        <a href="#" class="romans-footer__social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z" />
+          </svg>
+        </a>
+        <a href="tel:2741083014" class="romans-footer__social-link" aria-label="Phone">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+          </svg>
+        </a>
+      </div>
+      <a href="tel:2741083014" class="romans-footer__phone">27410 83014</a>
+      <p class="romans-footer__legal">Εξουσιοδοτημένος αντιπρόσωπος SYM · DAYTONA · KAWASAKI · MODENAS · QUADRO στην
+        Κορινθία.</p>
+    </div>
+    <div class="romans-footer__bottom">
+      <span class="romans-footer__copyright">© 2025 MOTO CENTER ΕΥΜΟΡΦΙΑΔΗΣ — ΚΟΡΙΝΘΟΣ</span>
+      <div class="romans-footer__links">
+        <a href="bikes.html" class="romans-footer__link">SHOWROOM</a>
+        <a href="services.html" class="romans-footer__link">ΥΠΗΡΕΣΙΕΣ</a>
+        <a href="contact.html" class="romans-footer__link">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data-service.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Bike Detail Page Logic
+
+    // Show error message with diagnostics
+    function showError(msg) {
+      const currentUrl = window.location.href;
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const storedId = localStorage.getItem('selectedBikeId');
+
+      document.getElementById('bikeDetail').innerHTML = `
+        <div class="detail-error">
+          <p style="font-size: 1.2em; color: #d32f2f; margin-bottom: 20px;">${msg}</p>
+          <div style="background: #f5f5f5; padding: 15px; border-radius: 4px; font-family: monospace; font-size: 0.8rem; text-align: left; margin: 20px auto; max-width: 600px; overflow-wrap: break-word;">
+            <strong>Diagnostics:</strong><br>
+            URL: ${currentUrl}<br>
+            ID Param: ${id ? `'${id}'` : 'null/empty'}<br>
+            Stored ID: ${storedId ? `'${storedId}'` : 'null/empty'}<br>
+            Time: ${new Date().toLocaleTimeString()}
+          </div>
+          <a href="bikes.html" style="margin-top: 20px; display: inline-block;">← ΕΠΙΣΤΡΟΦΗ ΣΤΟ SHOWROOM</a>
+        </div>
+      `;
+    }
+
+    // Render bike detail
+    function renderBikeDetail(bike) {
+      const price = bike.price
+        ? '€' + Number(bike.price).toLocaleString('el-GR')
+        : 'ΚΑΤΟΠΙΝ ΕΠΙΚΟΙΝΩΝΙΑΣ';
+
+      const mainImage = bike.images[0];
+      const thumbImages = bike.images.slice(0, 6);
+
+      const specsHTML = [
+        bike.price
+          ? `<div class="spec-row">
+               <span class="spec-label">Τιμή:</span>
+               <span class="spec-value spec-price">${price}</span>
+             </div>`
+          : `<div class="spec-row">
+               <span class="spec-label">Τιμή:</span>
+               <span class="spec-value">Κατόπιν επικοινωνίας</span>
+             </div>`,
+        bike.color
+          ? `<div class="spec-row">
+               <span class="spec-label">Χρώμα:</span>
+               <span class="spec-value">${bike.color}</span>
+             </div>` : '',
+        bike.year
+          ? `<div class="spec-row">
+               <span class="spec-label">Έτος:</span>
+               <span class="spec-value">${bike.year}</span>
+             </div>` : '',
+        bike.mileage !== undefined
+          ? `<div class="spec-row">
+               <span class="spec-label">Χιλιόμετρα:</span>
+               <span class="spec-value">${Number(bike.mileage).toLocaleString('el-GR')} km</span>
+             </div>` : '',
+        bike.engine_cc
+          ? `<div class="spec-row">
+               <span class="spec-label">Κυβισμός:</span>
+               <span class="spec-value">${bike.engine_cc} cc</span>
+             </div>` : '',
+        bike.category
+          ? `<div class="spec-row">
+               <span class="spec-label">Κατηγορία:</span>
+               <span class="spec-value">${bike.category}</span>
+             </div>` : '',
+        bike.brand
+          ? `<div class="spec-row">
+               <span class="spec-label">Μάρκα:</span>
+               <span class="spec-value">${bike.brand}</span>
+             </div>` : '',
+      ].filter(Boolean).join('');
+
+      document.getElementById('bikeDetail').innerHTML = `
+
+        <!-- BREADCRUMB -->
+        <div class="detail-breadcrumb">
+          <div class="detail-breadcrumb__inner">
+            <a href="bikes.html" class="detail-breadcrumb__link">
+              ← ΕΠΙΣΤΡΟΦΗ ΣΤΟ SHOWROOM
+            </a>
+          </div>
+        </div>
+
+        <!-- MAIN LAYOUT: image left, specs right -->
+        <div class="detail-layout">
+
+          <!-- LEFT: Image gallery -->
+          <div class="detail-gallery">
+            <div class="detail-gallery__main">
+              <img
+                src="${mainImage}"
+                alt="${bike.title}"
+                id="mainDetailImg"
+                class="detail-gallery__main-img"
+                onerror="this.src='https://via.placeholder.com/800x600'"
+              />
+            </div>
+            ${thumbImages.length > 1 ? `
+            <div class="detail-gallery__thumbs">
+              ${thumbImages.map((img, i) => `
+                <div class="detail-gallery__thumb ${i === 0 ? 'active' : ''}"
+                     onclick="
+                       document.getElementById('mainDetailImg').src='${img}';
+                       document.querySelectorAll('.detail-gallery__thumb')
+                         .forEach(t=>t.classList.remove('active'));
+                       this.classList.add('active');
+                     ">
+                  <img src="${img}"
+                       alt="Photo ${i + 1}"
+                       onerror="this.src='https://via.placeholder.com/150x150'"/>
+                </div>
+              `).join('')}
+            </div>` : ''}
+          </div>
+
+          <!-- RIGHT: Specs panel -->
+          <div class="detail-panel">
+
+            <div class="detail-panel__header">
+              <h1 class="detail-panel__title">${bike.title}</h1>
+            </div>
+
+            <div class="detail-panel__rule"></div>
+
+            <div class="detail-panel__specs">
+              ${specsHTML}
+            </div>
+
+            <div class="detail-panel__actions">
+              <a href="contact.html?vehicle=${encodeURIComponent(bike.title)}"
+                 class="detail-btn detail-btn--primary">
+                ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ
+              </a>
+              <a href="tel:2741083014"
+                 class="detail-btn detail-btn--secondary">
+                27410 83014
+              </a>
+            </div>
+
+            <div class="detail-panel__share">
+              <span class="detail-share-label">ΚΟΙΝΟΠΟΙΗΣΗ:</span>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}"
+                 target="_blank"
+                 class="detail-share-link">Facebook</a>
+              <a href="https://wa.me/?text=${encodeURIComponent(bike.title + ' - ' + window.location.href)}"
+                 target="_blank"
+                 class="detail-share-link">WhatsApp</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DESCRIPTION -->
+        ${bike.description ? `
+        <div class="detail-description">
+          <div class="detail-description__inner">
+            <h2 class="detail-section-title">ΠΕΡΙΓΡΑΦΗ</h2>
+            <div class="detail-section-rule"></div>
+            <div class="detail-description__text">
+              ${bike.description.replace(/\n/g, '<br>')}
+            </div>
+          </div>
+        </div>` : ''}
+
+        <!-- BACK LINK -->
+        <div class="detail-back">
+          <a href="bikes.html" class="detail-back__link">
+            ← ΕΠΙΣΤΡΟΦΗ ΣΤΟ SHOWROOM
+          </a>
+        </div>
+
+      `;
+    }
+
+    // Load bike detail
+    async function loadBikeDetail() {
+      console.log('Current Location:', window.location.href);
+      const params = new URLSearchParams(window.location.search);
+      let id = params.get('id');
+
+      // Fallback: Check localStorage if ID is missing from URL
+      if (!id) {
+        console.warn('ID missing from URL, checking localStorage...');
+        const storedId = localStorage.getItem('selectedBikeId');
+        if (storedId) {
+          console.log('Found ID in localStorage:', storedId);
+          id = storedId;
+          // Optional: Update URL to include ID for sharing (without reloading)
+          const newUrl = new URL(window.location);
+          newUrl.searchParams.set('id', id);
+          window.history.replaceState({}, '', newUrl);
+        }
+      }
+
+      console.log('Final Parsed ID:', id);
+
+      if (!id) {
+        showError('Δεν βρέθηκε αναγνωριστικό οχήματος.');
+        return;
+      }
+
+      try {
+        // Use centralized data service
+        const bike = await window.fetchBikeById(id);
+
+        if (!bike) {
+          showError('Το όχημα δεν βρέθηκε.');
+          return;
+        }
+
+        renderBikeDetail(bike);
+
+      } catch (err) {
+        console.error('Error loading bike:', err);
+        showError('Σφάλμα φόρτωσης. Παρακαλώ δοκιμάστε ξανά.');
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      loadBikeDetail();
+
+      // Navbar in light mode
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        navbar.classList.add('navbar--light');
+      }
+    });
+  </script>
+</body>
+
+</html>

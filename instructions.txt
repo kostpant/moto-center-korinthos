@@ -1,0 +1,53 @@
+Read js/data-service.js carefully.
+Fix TWO specific problems described below.
+Do not change any other files.
+
+════════════════════════════════════════════════════════════════
+  FIX 1 — REMOVE THE STATUS FILTER
+════════════════════════════════════════════════════════════════
+
+In the fetchBikes() function, find this line:
+  filterByFormula: "{Status}='✅ Διαθέσιμο'",
+
+Replace it with this — show ALL records regardless of status:
+  filterByFormula: "NOT({Title}='')",
+
+Reason: the client's new listings don't have Status filled in
+yet, so the filter hides them. We show all non-empty records
+and will re-add status filtering later.
+
+Do the same in fetchFeaturedBikes() — find:
+  filterByFormula: "AND({Status}='✅ Διαθέσιμο',{Featured}=1)",
+
+Replace with:
+  filterByFormula: "{Featured}=1",
+
+════════════════════════════════════════════════════════════════
+  FIX 2 — HANDLE CORB IMAGE ERRORS GRACEFULLY
+════════════════════════════════════════════════════════════════
+
+Airtable attachment image URLs get blocked by CORB when 
+running on localhost. The image shows as a gray broken box.
+
+In the mapRecord() function, find where images are mapped:
+  images: (f.Images && f.Images.length > 0)
+    ? f.Images.map(img => img.url)
+    : ['./assets/images/placeholder.jpg'],
+
+Change to use image thumbnails which have better CORS support:
+  images: (f.Images && f.Images.length > 0)
+    ? f.Images.map(img => 
+        img.thumbnails?.large?.url || 
+        img.thumbnails?.full?.url  || 
+        img.url
+      )
+    : ['./assets/images/placeholder.jpg'],
+
+════════════════════════════════════════════════════════════════
+  CHECKLIST
+════════════════════════════════════════════════════════════════
+
+  [ ] fetchBikes() no longer filters by Status
+  [ ] fetchFeaturedBikes() no longer filters by Status
+  [ ] mapRecord() tries thumbnails before full URL
+  [ ] No other changes made to any file
